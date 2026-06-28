@@ -1,12 +1,42 @@
-# AWS-Cloud-Infrastructure-Lab
-Designed, secured, and deployed a production-ready static portfolio website on AWS using Amazon S3, CloudFront, Route 53, AWS Certificate Manager, IAM, CloudWatch, AWS Budgets, and GitHub Actions while implementing AWS Well-Architected Framework best practices.
-# AWS Cloud Infrastructure Lab
+<div align="center">
+
+# ☁️ AWS Enterprise Cloud Infrastructure Lab
+
+### Designing, Securing, and Deploying a Production-Ready Static Website on AWS
+
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazonaws)
+![Amazon S3](https://img.shields.io/badge/Amazon-S3-red?style=for-the-badge&logo=amazons3)
+![CloudFront](https://img.shields.io/badge/CloudFront-CDN-orange?style=for-the-badge)
+![Route 53](https://img.shields.io/badge/Route53-DNS-green?style=for-the-badge)
+![IAM](https://img.shields.io/badge/IAM-Security-blue?style=for-the-badge)
+![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-blue?style=for-the-badge&logo=githubactions)
+
+</div>
+
+---
 
 ## Overview
 
-This project demonstrates the design, deployment, and administration of a secure cloud-hosted infrastructure using core Amazon Web Services (AWS). The environment was built to simulate a production-ready static web hosting solution while implementing security, networking, monitoring, and cost management best practices.
+This project demonstrates the deployment of a secure, scalable, and production-ready AWS cloud infrastructure using core AWS services.
 
-The lab was designed around AWS Cloud Practitioner (CLF-C02) concepts and provides hands-on experience with cloud infrastructure deployment, identity and access management, content delivery, monitoring, and cloud cost optimization.
+The environment was designed to showcase foundational cloud engineering skills by implementing secure identity management, static website hosting, global content delivery, DNS management, monitoring, cost optimization, and deployment automation.
+
+The project follows AWS security best practices and aligns with the AWS Well-Architected Framework while providing hands-on experience with real-world cloud infrastructure.
+
+### AWS Services Used
+
+- Amazon S3
+- Amazon CloudFront
+- Amazon Route 53
+- AWS Certificate Manager (ACM)
+- AWS Identity and Access Management (IAM)
+- Amazon CloudWatch
+- AWS Budgets
+- AWS Cost Explorer
+- GitHub Actions (CI/CD)
+
+---
+
 
 The project includes:
 
