@@ -14,7 +14,7 @@
 </div>
 
 ---
-![image1](images/front2.png)
+![image1](images/50625e08-da08-476d-b334-21787a255728.png)
 ## Overview
 
 This project demonstrates the deployment of a secure, scalable, and production-ready AWS cloud infrastructure using core AWS services.
