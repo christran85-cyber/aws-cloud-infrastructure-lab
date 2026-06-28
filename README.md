@@ -14,7 +14,7 @@
 </div>
 
 ---
-
+![image1](images/front2.png)
 ## Overview
 
 This project demonstrates the deployment of a secure, scalable, and production-ready AWS cloud infrastructure using core AWS services.
