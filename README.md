@@ -316,5 +316,381 @@ Users can access the website using a custom domain name secured with HTTPS.
 **Screenshot**
 
 ```
+---
+
+# Phase 7: Amazon CloudWatch Monitoring
+
+## Configure CloudWatch Monitoring
+
+Amazon CloudWatch was configured to monitor the health and performance of the deployed cloud infrastructure.
+
+### Monitoring Objectives
+
+- Monitor website requests
+- Observe CloudFront performance
+- Track S3 metrics
+- Monitor HTTP error rates
+- Verify infrastructure availability
+
+### CloudWatch Metrics
+
+| Metric | Purpose |
+|----------|----------|
+| Requests | Total website requests |
+| Bytes Downloaded | Network usage |
+| Cache Hit Rate | CloudFront performance |
+| 4XX Error Rate | Client-side errors |
+| 5XX Error Rate | Server-side errors |
+
+### Tasks Completed
+
+- Enabled CloudWatch Metrics
+- Reviewed CloudFront metrics
+- Verified request statistics
+- Monitored bandwidth utilization
+- Reviewed error metrics
+
+### Outcome
+
+CloudWatch provides operational visibility into infrastructure performance and supports proactive monitoring.
+
+**Screenshot**
+
+```
+screenshots/07-cloudwatch-dashboard.png
+```
+
+---
+
+# Phase 8: AWS Budgets
+
+## Configure Cost Monitoring
+
+AWS Budgets was configured to monitor monthly cloud spending and generate alerts when spending thresholds are exceeded.
+
+### Budget Configuration
+
+| Setting | Value |
+|----------|----------|
+| Budget Type | Monthly Cost Budget |
+| Budget Amount | $10 USD |
+| Alert Threshold | 80% |
+| Final Threshold | 100% |
+| Notification | Email |
+
+### Tasks Completed
+
+- Created monthly budget
+- Configured alert thresholds
+- Verified email notifications
+- Reviewed estimated monthly cost
+
+### Outcome
+
+Budget alerts provide early warning of unexpected spending and help maintain cost control.
+
+**Screenshot**
+
+```
+screenshots/08-aws-budgets.png
+```
+
+---
+
+# Phase 9: AWS Cost Explorer
+
+## Analyze Cloud Spending
+
+AWS Cost Explorer was used to analyze service usage and estimate monthly operating costs.
+
+### Services Reviewed
+
+- Amazon S3
+- Amazon CloudFront
+- Amazon Route 53
+- AWS Certificate Manager
+- Amazon CloudWatch
+
+### Cost Optimization
+
+The project was designed to minimize operating costs by utilizing AWS Free Tier eligible services whenever possible.
+
+### Estimated Monthly Cost
+
+| Service | Estimated Cost |
+|----------|----------------|
+| Amazon S3 | Minimal |
+| CloudFront | Low |
+| Route 53 | Domain + Hosted Zone |
+| ACM | No Additional Cost |
+| CloudWatch | Free Tier Usage |
+| AWS Budgets | Free |
+
+### Outcome
+
+The infrastructure provides a secure and scalable solution while maintaining a low monthly operating cost.
+
+**Screenshot**
+
+```
+screenshots/09-cost-explorer.png
+```
+
+---
+
+# Phase 10: GitHub Actions CI/CD
+
+## Configure Continuous Deployment
+
+GitHub Actions was integrated with AWS to automate deployment of the static website.
+
+### Deployment Workflow
+
+1. Developer pushes code to GitHub.
+2. GitHub Actions workflow executes.
+3. Website files synchronize with Amazon S3.
+4. CloudFront cache invalidation is triggered.
+5. Updated website becomes available globally.
+
+### Benefits
+
+- Automated deployments
+- Faster updates
+- Version control
+- Reduced manual administration
+- Consistent deployment process
+
+### Outcome
+
+Website deployments can be completed automatically after each code commit.
+
+**Screenshot**
+
+```
+screenshots/10-github-actions.png
+```
+
+---
+
+# Phase 11: Infrastructure Validation
+
+## Validate Cloud Infrastructure
+
+The deployed environment was tested to ensure all AWS services were functioning correctly.
+
+### Website Validation
+
+- Website loads successfully
+- HTTPS connection verified
+- SSL certificate validated
+- CloudFront distribution operational
+
+### DNS Validation
+
+```bash
+nslookup yourdomain.com
+```
+
+### HTTPS Validation
+
+```bash
+curl -I https://yourdomain.com
+```
+
+### Connectivity Validation
+
+```bash
+ping yourdomain.com
+```
+
+### Results
+
+- DNS resolves successfully
+- HTTPS encryption verified
+- CloudFront caching operational
+- Website accessible globally
+
+**Screenshot**
+
+```
+screenshots/11-live-website.png
+```
+
+---
+
+# Phase 12: AWS Well-Architected Framework Review
+
+## Evaluate Infrastructure
+
+The deployed solution was evaluated using the AWS Well-Architected Framework.
+
+### Operational Excellence
+
+- Infrastructure documented
+- GitHub version control implemented
+- CI/CD deployment pipeline configured
+
+### Security
+
+- IAM Least Privilege
+- MFA Enabled
+- HTTPS Encryption
+- IAM Groups
+- IAM Policies
+
+### Reliability
+
+- Highly durable Amazon S3 storage
+- CloudFront global edge network
+- Managed AWS services
+
+### Performance Efficiency
+
+- Global CDN
+- Edge caching
+- Optimized content delivery
+
+### Cost Optimization
+
+- AWS Budgets
+- Cost Explorer
+- Free Tier eligible services
+- Minimal operational costs
+
+### Sustainability
+
+- Fully managed cloud services
+- Efficient resource utilization
+- Minimal infrastructure overhead
+
+**Screenshot**
+
+```
+screenshots/12-well-architected-review.png
+```
+
+---
+
+# Results
+
+The environment successfully demonstrated:
+
+✅ Secure AWS account configuration
+
+✅ Identity and Access Management (IAM)
+
+✅ Amazon S3 Static Website Hosting
+
+✅ CloudFront Content Delivery
+
+✅ HTTPS with AWS Certificate Manager
+
+✅ Route 53 DNS Management
+
+✅ CloudWatch Monitoring
+
+✅ AWS Budgets Cost Management
+
+✅ AWS Cost Explorer Analysis
+
+✅ GitHub Actions Continuous Deployment
+
+✅ AWS Well-Architected Framework Implementation
+
+---
+
+# Skills Demonstrated
+
+## Cloud Infrastructure
+
+- AWS Management Console
+- Amazon S3
+- Amazon CloudFront
+- Amazon Route 53
+- AWS Certificate Manager
+- Amazon CloudWatch
+
+## Identity & Security
+
+- IAM Users
+- IAM Groups
+- IAM Policies
+- Least Privilege
+- Multi-Factor Authentication (MFA)
+- HTTPS
+- SSL/TLS
+
+## Networking
+
+- DNS Configuration
+- Content Delivery Networks (CDN)
+- HTTPS
+- Public Website Hosting
+- Domain Management
+
+## Cost Management
+
+- AWS Budgets
+- AWS Cost Explorer
+- Free Tier Optimization
+- Cost Monitoring
+
+## DevOps
+
+- Git
+- GitHub
+- GitHub Actions
+- Continuous Deployment (CI/CD)
+
+---
+
+# Lessons Learned
+
+Throughout this project, several AWS concepts were reinforced through hands-on implementation.
+
+### Technical Knowledge
+
+- Identity and access management using IAM
+- Secure static website hosting with Amazon S3
+- Global content delivery with CloudFront
+- Domain management with Route 53
+- SSL certificate deployment using ACM
+- Infrastructure monitoring with CloudWatch
+- Cost optimization using AWS Budgets
+- Automated deployments using GitHub Actions
+
+### Best Practices
+
+- Follow the Principle of Least Privilege
+- Avoid using the AWS root account
+- Enable Multi-Factor Authentication
+- Monitor cloud resources continuously
+- Automate repetitive deployment tasks
+- Review cloud costs regularly
+
+---
+
+# Future Improvements
+
+Potential enhancements include:
+
+- Deploy a dynamic web application using Amazon EC2
+- Integrate Amazon RDS for database services
+- Implement AWS Lambda serverless functions
+- Deploy infrastructure using AWS CloudFormation
+- Migrate infrastructure to Terraform
+- Configure AWS WAF for web application protection
+- Implement Amazon CloudTrail logging
+- Configure Amazon SNS notifications
+- Deploy applications using Amazon ECS
+- Integrate AWS CodePipeline
+
+---
+
+# Conclusion
+
+This project demonstrates the deployment of a secure, scalable, and cost-effective cloud infrastructure using core AWS services. By implementing identity management, content delivery, monitoring, automation, and cost optimization, the environment reflects many of the foundational concepts expected of an AWS Cloud Engineer.
+
+The project reinforced practical cloud administration skills while following AWS security best practices and the AWS Well-Architected Framework. It also serves as a strong portfolio project demonstrating hands-on experience with cloud infrastructure deployment, monitoring, automation, and operational management.
 screenshots/06-route53.png
 ```
