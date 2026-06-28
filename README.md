@@ -316,8 +316,8 @@ Users can access the website using a custom domain name secured with HTTPS.
 **Screenshot**
 
 ```
-FILE
-...
+screenshots/06-route53.png
+```
 
 ---
 
