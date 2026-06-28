@@ -316,6 +316,7 @@ Users can access the website using a custom domain name secured with HTTPS.
 **Screenshot**
 
 ```
+
 ---
 
 # Phase 7: Amazon CloudWatch Monitoring
