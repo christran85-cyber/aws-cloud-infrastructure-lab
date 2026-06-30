@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS Cloud Infrastructure Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>AWS Cloud Infrastructure Lab</h1>
+  <p>Deployed on Amazon S3 Static Website Hosting.</p>
+
+  <h2>Services Demonstrated</h2>
+  <ul>
+    <li>AWS IAM</li>
+    <li>Amazon S3</li>
+    <li>Amazon CloudFront</li>
+    <li>Amazon CloudWatch</li>
+    <li>AWS Budgets</li>
+    <li>GitHub Actions</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
