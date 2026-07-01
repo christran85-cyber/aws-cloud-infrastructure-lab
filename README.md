@@ -127,7 +127,7 @@ Administrative tasks are performed using IAM instead of the AWS Root account.
 
 ### Screenshot
 
-![Phase 1 - AWS Account Security](images/phase 1.png)
+![Phase 1 - AWS Account Security](images/phase1.png)
 
 ---
 
