@@ -322,31 +322,40 @@ screenshots/05-acm-certificate.png
 
 ---
 
-# Phase 6: Amazon Route 53
+# Phase 6: AWS Cost Management
 
-## Configure DNS
+## Monitor Cloud Spending
 
-Amazon Route 53 was configured to manage DNS records and route traffic to the CloudFront distribution.
-
-### Hosted Zone
-
-| Record Type | Target                  |
-| ----------- | ----------------------- |
-| A (Alias)   | CloudFront Distribution |
-| AAAA        | CloudFront Distribution |
+AWS Cost Management services were configured to monitor cloud spending, analyze usage, and prevent unexpected charges during infrastructure deployment.
 
 ### Tasks Completed
 
-* Created Hosted Zone
-* Configured Alias records
-* Linked custom domain
-* Verified DNS propagation
+- Created monthly AWS Budget
+- Configured spending alerts
+- Enabled AWS Cost Explorer
+- Reviewed Billing Dashboard
+- Monitored AWS Free Tier usage
+
+### Services Used
+
+| Service | Purpose |
+|----------|----------|
+| AWS Budgets | Spending alerts |
+| AWS Cost Explorer | Cost analysis |
+| Billing Dashboard | Cost monitoring |
+| AWS Free Tier | Free Tier usage tracking |
 
 ### Outcome
 
-Users can access the website using a custom domain name secured with HTTPS.
+AWS Cost Management provides visibility into cloud spending and enables proactive cost control through budgets, alerts, and usage analysis.
 
-**Screenshot**
+### Screenshot
+
+![AWS Budget](screenshots/06-budget.png)
+
+![AWS Cost Explorer](screenshots/06-cost-explorer.png)
+
+---
 
 ```
 screenshots/06-route53.png
