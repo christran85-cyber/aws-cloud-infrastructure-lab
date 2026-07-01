@@ -15,7 +15,7 @@
 
 ---
 
-![Architecture](images/aws-architecture.png)
+![Architecture](images/Finalflow.png)
 
 # Overview
 
