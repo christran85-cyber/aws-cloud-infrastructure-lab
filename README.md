@@ -165,7 +165,7 @@ AWS Identity and Access Management (IAM) was configured following least privileg
 
 AWS resources are managed through IAM instead of the Root account.
 
-##Screenshot
+## Screenshot
 
 ![Phase 1 -  Identity and Access Management](images/phase2.png)
 
