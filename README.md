@@ -2,94 +2,68 @@
 
 # ☁️ AWS Enterprise Cloud Infrastructure Lab
 
-### Designing, Securing, and Deploying a Production-Ready Static Website on AWS
+### Designing, Securing, Deploying, and Monitoring a Secure Static Website on Amazon Web Services
 
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange?style=for-the-badge&logo=amazonaws)
 ![Amazon S3](https://img.shields.io/badge/Amazon-S3-red?style=for-the-badge&logo=amazons3)
 ![CloudFront](https://img.shields.io/badge/CloudFront-CDN-orange?style=for-the-badge)
-![Route 53](https://img.shields.io/badge/Route53-DNS-green?style=for-the-badge)
+![CloudWatch](https://img.shields.io/badge/CloudWatch-Monitoring-blue?style=for-the-badge)
 ![IAM](https://img.shields.io/badge/IAM-Security-blue?style=for-the-badge)
-![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-blue?style=for-the-badge&logo=githubactions)
+![GitHub](https://img.shields.io/badge/GitHub-Version_Control-black?style=for-the-badge&logo=github)
 
 </div>
 
 ---
-![image1](images/50625e08-da08-476d-b334-21787a255728.png)
-## Overview
 
-This project demonstrates the deployment of a secure, scalable, and production-ready AWS cloud infrastructure using core AWS services.
+![Architecture](images/aws-architecture.png)
 
-The environment was designed to showcase foundational cloud engineering skills by implementing secure identity management, static website hosting, global content delivery, DNS management, monitoring, cost optimization, and deployment automation.
+# Overview
 
-The project follows AWS security best practices and aligns with the AWS Well-Architected Framework while providing hands-on experience with real-world cloud infrastructure.
+This project demonstrates the deployment of a secure, scalable cloud infrastructure using core Amazon Web Services (AWS).
 
-### AWS Services Used
+The environment was built to simulate a production-ready static website while implementing AWS security best practices, content delivery, monitoring, and cloud cost management.
+
+The project aligns with AWS Cloud Practitioner (CLF-C02) objectives and provides practical experience with identity management, static website hosting, content delivery networks (CDN), monitoring, and operational cost optimization.
+
+---
+
+# AWS Services Used
 
 - Amazon S3
 - Amazon CloudFront
-- Amazon Route 53
-- AWS Certificate Manager (ACM)
 - AWS Identity and Access Management (IAM)
 - Amazon CloudWatch
 - AWS Budgets
 - AWS Cost Explorer
-- GitHub Actions (CI/CD)
+- GitHub
+- AWS Well-Architected Framework
 
 ---
 
+# Environment
 
-The project includes:
-
-* Amazon S3 Static Website Hosting
-* AWS Identity and Access Management (IAM)
-* AWS Certificate Manager (ACM)
-* Amazon CloudFront
-* Amazon Route 53
-* Amazon CloudWatch
-* AWS Budgets
-* AWS Cost Explorer
-* IAM Security Best Practices
-* GitHub Version Control
-* GitHub Actions (CI/CD)
-* AWS Well-Architected Framework Review
-
-The objective of this project was to gain practical experience deploying cloud infrastructure while implementing AWS security, reliability, operational excellence, performance efficiency, and cost optimization best practices.
+| Component | Purpose |
+|------------|------------|
+| AWS Management Console | Cloud Administration |
+| Amazon S3 | Static Website Hosting |
+| Amazon CloudFront | Global Content Delivery |
+| AWS IAM | Identity & Access Management |
+| Amazon CloudWatch | Infrastructure Monitoring |
+| AWS Budgets | Cost Monitoring |
+| AWS Cost Explorer | Billing Analysis |
+| GitHub | Source Code Management |
 
 ---
 
-## Environment
+# Cloud Architecture
 
-| Component               | Purpose                               |
-| ----------------------- | ------------------------------------- |
-| AWS Management Console  | Cloud administration                  |
-| Amazon S3               | Static website hosting                |
-| Amazon CloudFront       | Global content delivery network (CDN) |
-| Amazon Route 53         | DNS management                        |
-| AWS Certificate Manager | SSL/TLS certificate management        |
-| AWS IAM                 | Identity and access management        |
-| Amazon CloudWatch       | Monitoring and metrics                |
-| AWS Budgets             | Cost monitoring                       |
-| AWS Cost Explorer       | Billing analysis                      |
-| GitHub                  | Source code management                |
-| GitHub Actions          | Continuous deployment                 |
-
----
-
-## Cloud Architecture
-
-### User Request Flow
+## User Request Flow
 
 ```text
 Internet User
       │
       ▼
-Amazon Route 53
-      │
-      ▼
 Amazon CloudFront
-      │
-      ▼
-AWS Certificate Manager (HTTPS)
       │
       ▼
 Amazon S3 Static Website
@@ -98,30 +72,29 @@ Amazon S3 Static Website
 HTML • CSS • JavaScript
 ```
 
-### Management Services
+---
 
-The environment utilizes several AWS services to provide security, monitoring, and operational visibility.
+## Management Services
 
-* IAM manages authentication and authorization.
-* CloudWatch collects metrics and operational data.
-* AWS Budgets monitors monthly spending.
-* Cost Explorer provides cost analysis and forecasting.
-* GitHub Actions automates website deployments.
+The infrastructure uses several AWS services to improve security, monitoring, and operational visibility.
+
+- IAM manages authentication and authorization.
+- CloudWatch provides centralized monitoring.
+- AWS Budgets monitors monthly cloud spending.
+- AWS Cost Explorer analyzes resource usage.
+- GitHub provides version control.
 
 ---
 
-## Project Objectives
+# Project Objectives
 
-* Deploy a production-ready static website using Amazon S3.
-* Secure cloud resources using IAM least privilege principles.
-* Configure HTTPS using AWS Certificate Manager.
-* Deliver content globally using Amazon CloudFront.
-* Configure DNS with Amazon Route 53.
-* Monitor infrastructure using Amazon CloudWatch.
-* Implement AWS Budgets for cost monitoring.
-* Analyze cloud spending using AWS Cost Explorer.
-* Automate deployments using GitHub Actions.
-* Apply AWS Well-Architected Framework principles.
+- Deploy a production-ready static website using Amazon S3
+- Secure AWS resources using IAM
+- Deliver content globally with Amazon CloudFront
+- Monitor infrastructure using CloudWatch
+- Implement AWS Budgets
+- Analyze cloud spending using Cost Explorer
+- Follow AWS Well-Architected best practices
 
 ---
 
@@ -129,28 +102,28 @@ The environment utilizes several AWS services to provide security, monitoring, a
 
 ## Configure AWS Account
 
-The AWS account was secured by implementing security best practices before deploying any infrastructure.
+Security best practices were implemented before deploying cloud resources.
 
-### Security Tasks
+### Tasks Completed
 
-* Enabled Multi-Factor Authentication (MFA)
-* Created administrative IAM user
-* Restricted use of the root account
-* Configured account password policy
-* Verified account contact information
+- Enabled Multi-Factor Authentication (MFA)
+- Created IAM Administrator
+- Restricted Root Account Usage
+- Configured Password Policy
+- Verified Contact Information
 
-### IAM Administrator Account
+### IAM Administrator
 
-| Setting     | Value               |
-| ----------- | ------------------- |
-| Username    | cloudadmin          |
-| Access Type | Console Access      |
-| MFA         | Enabled             |
+| Setting | Value |
+|----------|----------|
+| Username | cloudadmin |
+| Access | Console |
+| MFA | Enabled |
 | Permissions | AdministratorAccess |
 
 ### Outcome
 
-Administrative activities are performed using an IAM user instead of the root account, reducing risk and following AWS security best practices.
+Administrative tasks are performed using IAM instead of the AWS Root account.
 
 **Screenshot**
 
@@ -164,35 +137,34 @@ screenshots/01-aws-console.png
 
 ## Configure IAM
 
-AWS Identity and Access Management (IAM) was used to create secure identities and control access to AWS resources.
+AWS Identity and Access Management (IAM) was configured following least privilege principles.
 
 ### Tasks Completed
 
-* Created IAM users
-* Configured IAM groups
-* Assigned permissions
-* Enabled MFA
-* Reviewed IAM policies
-* Applied least privilege principles
+- Created IAM Users
+- Created IAM Groups
+- Assigned IAM Policies
+- Enabled MFA
+- Applied Least Privilege
 
 ### IAM Groups
 
-| Group          | Permissions         |
-| -------------- | ------------------- |
+| Group | Permissions |
+|----------|------------|
 | Administrators | AdministratorAccess |
-| Developers     | PowerUserAccess     |
-| ReadOnly       | ReadOnlyAccess      |
+| Developers | PowerUserAccess |
+| ReadOnly | ReadOnlyAccess |
 
 ### Security Features
 
-* Multi-Factor Authentication
-* Password Policy
-* Least Privilege
-* Role-Based Access Control (RBAC)
+- MFA
+- Password Policies
+- RBAC
+- Least Privilege
 
 ### Outcome
 
-Access to AWS resources is controlled through IAM users and groups rather than using the root account.
+AWS resources are managed through IAM instead of the Root account.
 
 **Screenshot**
 
@@ -204,41 +176,36 @@ screenshots/02-iam-users.png
 
 # Phase 3: Amazon S3 Static Website Hosting
 
-## Create Amazon S3 Bucket
+## Deploy Static Website
 
-An Amazon S3 bucket was created to host a static portfolio website.
+Amazon S3 was configured to host a static website.
 
 ### Bucket Configuration
 
-| Setting             | Value                           |
-| ------------------- | ------------------------------- |
-| Bucket Name         | aws-cloud-portfolio-platform    |
-| Region              | us-east-1                       |
-| Versioning          | Enabled                         |
-| Encryption          | AES-256                         |
-| Block Public Access | Disabled (Website Hosting Only) |
+| Setting | Value |
+|----------|----------|
+| Region | us-east-1 |
+| Versioning | Enabled |
+| Encryption | AES-256 |
+| Static Website Hosting | Enabled |
 
 ### Website Files
 
-The following files were uploaded:
+- index.html
+- style.css
+- script.js
 
-* index.html
-* style.css
-* script.js
-* assets/
-* images/
+### Tasks Completed
 
-### Static Website Hosting
-
-Static website hosting was enabled through the bucket properties.
-
-### Bucket Policy
-
-A bucket policy was configured to allow public read access for website content while limiting administrative access through IAM.
+- Created S3 Bucket
+- Enabled Versioning
+- Enabled Encryption
+- Enabled Static Website Hosting
+- Uploaded Website Files
 
 ### Outcome
 
-The website became publicly accessible through the Amazon S3 website endpoint.
+The website was successfully deployed using Amazon S3 Static Website Hosting.
 
 **Screenshot**
 
@@ -252,30 +219,40 @@ screenshots/03-s3-bucket.png
 
 ## Configure Content Delivery Network
 
-Amazon CloudFront was deployed in front of the S3 bucket to improve website performance, reduce latency, and provide HTTPS support.
+Amazon CloudFront was deployed in front of the Amazon S3 static website to improve website performance, reduce latency, and provide secure HTTPS access.
 
 ### Distribution Configuration
 
-| Setting     | Value                  |
-| ----------- | ---------------------- |
-| Origin      | Amazon S3              |
-| Protocol    | HTTPS                  |
-| Compression | Enabled                |
-| Caching     | Enabled                |
+| Setting | Value |
+|----------|----------|
+| Origin | Amazon S3 Static Website |
+| Distribution Type | Single Website |
+| HTTPS | Enabled |
+| Compression | Enabled |
+| Caching | AWS Recommended |
 | Price Class | Use All Edge Locations |
+
+### Tasks Completed
+
+- Created CloudFront Distribution
+- Connected Distribution to Amazon S3
+- Enabled HTTPS Delivery
+- Configured Default Root Object
+- Enabled Compression
+- Tested Website Accessibility
 
 ### Benefits
 
-* Global content delivery
-* Lower latency
-* HTTPS encryption
-* Edge caching
-* Improved availability
-* DDoS resilience
+- Global Content Delivery
+- Lower Latency
+- HTTPS Encryption
+- Edge Caching
+- Improved Availability
+- DDoS Resilience through AWS Edge Network
 
 ### Outcome
 
-Website traffic is delivered through AWS edge locations, improving performance for users worldwide.
+Website traffic is securely delivered through Amazon CloudFront using HTTPS while improving performance through AWS Global Edge Locations.
 
 **Screenshot**
 
@@ -285,355 +262,141 @@ screenshots/04-cloudfront.png
 
 ---
 
-# Phase 5: Amazon CloudWatch Monitoring
+# Phase 5: Amazon CloudWatch
 
 ## Monitor Cloud Infrastructure
 
-Amazon CloudWatch was used to explore monitoring capabilities and gain operational visibility into the deployed AWS infrastructure.
+Amazon CloudWatch was used to explore AWS monitoring services and review infrastructure monitoring capabilities.
 
 ### Monitoring Tasks
 
-- Accessed Amazon CloudWatch
+- Opened Amazon CloudWatch
 - Explored CloudWatch Metrics
-- Reviewed AWS monitoring services
-- Examined monitoring dashboards
-- Learned CloudWatch monitoring workflow
+- Reviewed AWS Monitoring Services
+- Examined CloudWatch Dashboards
+- Learned CloudWatch Monitoring Workflow
 
-### Services Monitored
+### Services Reviewed
 
 | Service | Purpose |
 |----------|----------|
-| Amazon CloudWatch | Infrastructure monitoring |
-| Amazon S3 | Storage metrics |
-| Amazon CloudFront | Performance metrics |
+| Amazon CloudWatch | Infrastructure Monitoring |
+| Amazon S3 | Storage Metrics |
+| Amazon CloudFront | Performance Monitoring |
+
+### Monitoring Features
+
+- Metrics
+- Dashboards
+- Alarms
+- Logs
+- Application Monitoring
+- Infrastructure Monitoring
 
 ### Outcome
 
-Amazon CloudWatch provides centralized monitoring, metrics collection, dashboards, alarms, and operational visibility for AWS resources. This enables administrators to monitor cloud infrastructure health and performance from a single service.
+Amazon CloudWatch provides centralized monitoring, operational visibility, and infrastructure health monitoring for AWS cloud resources.
 
-### Screenshot
+**Screenshot**
 
-![CloudWatch](screenshots/05-cloudwatch.png)
-
----
+```
+screenshots/05-cloudwatch.png
+```
 
 ---
 
 # Phase 6: AWS Cost Management
 
-## Monitor Cloud Spending
+## Configure Cost Monitoring
 
-AWS Cost Management services were configured to monitor cloud spending, analyze usage, and prevent unexpected charges during infrastructure deployment.
+AWS Cost Management services were configured to monitor cloud spending and prevent unexpected charges.
 
 ### Tasks Completed
 
-- Created monthly AWS Budget
-- Configured spending alerts
+- Created Monthly AWS Budget
+- Configured Budget Notifications
 - Enabled AWS Cost Explorer
 - Reviewed Billing Dashboard
-- Monitored AWS Free Tier usage
+- Monitored AWS Free Tier Usage
 
 ### Services Used
 
 | Service | Purpose |
 |----------|----------|
-| AWS Budgets | Spending alerts |
-| AWS Cost Explorer | Cost analysis |
-| Billing Dashboard | Cost monitoring |
-| AWS Free Tier | Free Tier usage tracking |
-
-### Outcome
-
-AWS Cost Management provides visibility into cloud spending and enables proactive cost control through budgets, alerts, and usage analysis.
-
-### Screenshot
-
-![AWS Budget](screenshots/06-budget.png)
-
-![AWS Cost Explorer](screenshots/06-cost-explorer.png)
-
----
-
----
-
-# Phase 7: Amazon CloudWatch Monitoring
-
-## Configure CloudWatch Monitoring
-
-Amazon CloudWatch was configured to monitor the health and performance of the deployed cloud infrastructure.
-
-### Monitoring Objectives
-
-- Monitor website requests
-- Observe CloudFront performance
-- Track S3 metrics
-- Monitor HTTP error rates
-- Verify infrastructure availability
-
-### CloudWatch Metrics
-
-| Metric | Purpose |
-|----------|----------|
-| Requests | Total website requests |
-| Bytes Downloaded | Network usage |
-| Cache Hit Rate | CloudFront performance |
-| 4XX Error Rate | Client-side errors |
-| 5XX Error Rate | Server-side errors |
-
-### Tasks Completed
-
-- Enabled CloudWatch Metrics
-- Reviewed CloudFront metrics
-- Verified request statistics
-- Monitored bandwidth utilization
-- Reviewed error metrics
-
-### Outcome
-
-CloudWatch provides operational visibility into infrastructure performance and supports proactive monitoring.
-
-**Screenshot**
-
-```
-screenshots/07-cloudwatch-dashboard.png
-```
-
----
-
-# Phase 8: AWS Budgets
-
-## Configure Cost Monitoring
-
-AWS Budgets was configured to monitor monthly cloud spending and generate alerts when spending thresholds are exceeded.
-
-### Budget Configuration
-
-| Setting | Value |
-|----------|----------|
-| Budget Type | Monthly Cost Budget |
-| Budget Amount | $10 USD |
-| Alert Threshold | 80% |
-| Final Threshold | 100% |
-| Notification | Email |
-
-### Tasks Completed
-
-- Created monthly budget
-- Configured alert thresholds
-- Verified email notifications
-- Reviewed estimated monthly cost
-
-### Outcome
-
-Budget alerts provide early warning of unexpected spending and help maintain cost control.
-
-**Screenshot**
-
-```
-screenshots/08-aws-budgets.png
-```
-
----
-
-# Phase 9: AWS Cost Explorer
-
-## Analyze Cloud Spending
-
-AWS Cost Explorer was used to analyze service usage and estimate monthly operating costs.
-
-### Services Reviewed
-
-- Amazon S3
-- Amazon CloudFront
-- Amazon Route 53
-- AWS Certificate Manager
-- Amazon CloudWatch
+| AWS Budgets | Spending Alerts |
+| AWS Cost Explorer | Cost Analysis |
+| Billing Dashboard | Cost Monitoring |
+| AWS Free Tier | Usage Tracking |
 
 ### Cost Optimization
 
-The project was designed to minimize operating costs by utilizing AWS Free Tier eligible services whenever possible.
-
-### Estimated Monthly Cost
-
-| Service | Estimated Cost |
-|----------|----------------|
-| Amazon S3 | Minimal |
-| CloudFront | Low |
-| Route 53 | Domain + Hosted Zone |
-| ACM | No Additional Cost |
-| CloudWatch | Free Tier Usage |
-| AWS Budgets | Free |
+The infrastructure was designed to minimize operational costs by utilizing Free Tier eligible AWS services whenever possible.
 
 ### Outcome
 
-The infrastructure provides a secure and scalable solution while maintaining a low monthly operating cost.
+AWS Cost Management provides visibility into cloud spending while helping maintain cost-efficient cloud operations.
 
 **Screenshot**
 
 ```
-screenshots/09-cost-explorer.png
+screenshots/06-budget.png
+```
+
+```
+screenshots/06-cost-explorer.png
 ```
 
 ---
 
-# Phase 10: GitHub Actions CI/CD
+# Phase 7: Resource Cleanup
 
-## Configure Continuous Deployment
+## Decommission AWS Infrastructure
 
-GitHub Actions was integrated with AWS to automate deployment of the static website.
+After validating the environment and documenting the project, AWS resources were removed to prevent unnecessary cloud charges.
 
-### Deployment Workflow
+### Resources Removed
 
-1. Developer pushes code to GitHub.
-2. GitHub Actions workflow executes.
-3. Website files synchronize with Amazon S3.
-4. CloudFront cache invalidation is triggered.
-5. Updated website becomes available globally.
+- Amazon CloudFront Distribution
+- Amazon S3 Static Website
+- Website Objects
 
-### Benefits
+### Cleanup Tasks
 
-- Automated deployments
-- Faster updates
-- Version control
-- Reduced manual administration
-- Consistent deployment process
+- Verified screenshots were captured
+- Confirmed GitHub documentation was completed
+- Disabled CloudFront Distribution
+- Deleted CloudFront Distribution
+- Deleted Amazon S3 Bucket
+- Verified no unnecessary billable resources remained
 
 ### Outcome
 
-Website deployments can be completed automatically after each code commit.
-
-**Screenshot**
-
-```
-screenshots/10-github-actions.png
-```
+The AWS environment was successfully decommissioned while preserving all project documentation, screenshots, GitHub source code, and deployment artifacts.
 
 ---
-
-# Phase 11: Infrastructure Validation
-
-## Validate Cloud Infrastructure
-
-The deployed environment was tested to ensure all AWS services were functioning correctly.
-
-### Website Validation
-
-- Website loads successfully
-- HTTPS connection verified
-- SSL certificate validated
-- CloudFront distribution operational
-
-### DNS Validation
-
-```bash
-nslookup yourdomain.com
-```
-
-### HTTPS Validation
-
-```bash
-curl -I https://yourdomain.com
-```
-
-### Connectivity Validation
-
-```bash
-ping yourdomain.com
-```
-
-### Results
-
-- DNS resolves successfully
-- HTTPS encryption verified
-- CloudFront caching operational
-- Website accessible globally
-
-**Screenshot**
-
-```
-screenshots/11-live-website.png
-```
-
----
-
-# Phase 12: AWS Well-Architected Framework Review
-
-## Evaluate Infrastructure
-
-The deployed solution was evaluated using the AWS Well-Architected Framework.
-
-### Operational Excellence
-
-- Infrastructure documented
-- GitHub version control implemented
-- CI/CD deployment pipeline configured
-
-### Security
-
-- IAM Least Privilege
-- MFA Enabled
-- HTTPS Encryption
-- IAM Groups
-- IAM Policies
-
-### Reliability
-
-- Highly durable Amazon S3 storage
-- CloudFront global edge network
-- Managed AWS services
-
-### Performance Efficiency
-
-- Global CDN
-- Edge caching
-- Optimized content delivery
-
-### Cost Optimization
-
-- AWS Budgets
-- Cost Explorer
-- Free Tier eligible services
-- Minimal operational costs
-
-### Sustainability
-
-- Fully managed cloud services
-- Efficient resource utilization
-- Minimal infrastructure overhead
-
-**Screenshot**
-
-```
-screenshots/12-well-architected-review.png
-```
-
----
-
 # Results
 
 The environment successfully demonstrated:
 
-✅ Secure AWS account configuration
+✅ AWS Account Security
 
 ✅ Identity and Access Management (IAM)
 
 ✅ Amazon S3 Static Website Hosting
 
-✅ CloudFront Content Delivery
+✅ Amazon CloudFront Content Delivery
 
-✅ HTTPS with AWS Certificate Manager
+✅ HTTPS Website Delivery
 
-✅ Route 53 DNS Management
+✅ Amazon CloudWatch Monitoring
 
-✅ CloudWatch Monitoring
+✅ AWS Cost Management
 
-✅ AWS Budgets Cost Management
+✅ GitHub Version Control
 
-✅ AWS Cost Explorer Analysis
+✅ Cloud Infrastructure Deployment
 
-✅ GitHub Actions Continuous Deployment
-
-✅ AWS Well-Architected Framework Implementation
+✅ AWS Well-Architected Best Practices
 
 ---
 
@@ -641,12 +404,14 @@ The environment successfully demonstrated:
 
 ## Cloud Infrastructure
 
-- AWS Management Console
 - Amazon S3
 - Amazon CloudFront
-- Amazon Route 53
-- AWS Certificate Manager
+- AWS Identity and Access Management (IAM)
 - Amazon CloudWatch
+- AWS Budgets
+- AWS Cost Explorer
+
+---
 
 ## Identity & Security
 
@@ -655,30 +420,48 @@ The environment successfully demonstrated:
 - IAM Policies
 - Least Privilege
 - Multi-Factor Authentication (MFA)
-- HTTPS
-- SSL/TLS
+- HTTPS Website Delivery
+- AWS Account Security
 
-## Networking
+---
 
-- DNS Configuration
+## Website Hosting
+
+- Static Website Hosting
 - Content Delivery Networks (CDN)
-- HTTPS
-- Public Website Hosting
-- Domain Management
+- Global Edge Locations
+- Edge Caching
+- Cloud Storage
+- Website Deployment
+
+---
+
+## Monitoring
+
+- Amazon CloudWatch
+- Cloud Metrics
+- Infrastructure Monitoring
+- Operational Visibility
+
+---
 
 ## Cost Management
 
 - AWS Budgets
 - AWS Cost Explorer
-- Free Tier Optimization
-- Cost Monitoring
+- AWS Billing Dashboard
+- AWS Free Tier Optimization
+- Cloud Cost Monitoring
 
-## DevOps
+---
+
+## Version Control
 
 - Git
 - GitHub
-- GitHub Actions
-- Continuous Deployment (CI/CD)
+- Repository Documentation
+- Markdown
+- Project Documentation
 
 ---
 
@@ -686,25 +469,29 @@ The environment successfully demonstrated:
 
 Throughout this project, several AWS concepts were reinforced through hands-on implementation.
 
-### Technical Knowledge
+## Technical Knowledge
 
-- Identity and access management using IAM
-- Secure static website hosting with Amazon S3
-- Global content delivery with CloudFront
-- Domain management with Route 53
-- SSL certificate deployment using ACM
-- Infrastructure monitoring with CloudWatch
-- Cost optimization using AWS Budgets
-- Automated deployments using GitHub Actions
+- Secure AWS account configuration
+- Identity management using IAM
+- Static website hosting with Amazon S3
+- Global content delivery using Amazon CloudFront
+- Infrastructure monitoring with Amazon CloudWatch
+- Cloud cost optimization using AWS Budgets
+- Cost analysis using AWS Cost Explorer
+- GitHub project documentation
 
-### Best Practices
+---
 
-- Follow the Principle of Least Privilege
-- Avoid using the AWS root account
+## AWS Best Practices
+
 - Enable Multi-Factor Authentication
-- Monitor cloud resources continuously
-- Automate repetitive deployment tasks
-- Review cloud costs regularly
+- Avoid daily use of the AWS Root account
+- Follow the Principle of Least Privilege
+- Encrypt cloud resources whenever possible
+- Monitor infrastructure health
+- Monitor cloud spending
+- Review Free Tier usage regularly
+- Remove unused AWS resources to prevent unnecessary charges
 
 ---
 
@@ -713,22 +500,72 @@ Throughout this project, several AWS concepts were reinforced through hands-on i
 Potential enhancements include:
 
 - Deploy a dynamic web application using Amazon EC2
-- Integrate Amazon RDS for database services
-- Implement AWS Lambda serverless functions
-- Deploy infrastructure using AWS CloudFormation
-- Migrate infrastructure to Terraform
-- Configure AWS WAF for web application protection
-- Implement Amazon CloudTrail logging
+- Build a multi-tier architecture
+- Deploy serverless applications using AWS Lambda
+- Store data using Amazon DynamoDB
+- Automate infrastructure with AWS CloudFormation
+- Learn Infrastructure as Code using Terraform
+- Implement Amazon CloudTrail
 - Configure Amazon SNS notifications
-- Deploy applications using Amazon ECS
-- Integrate AWS CodePipeline
+- Build CI/CD pipelines with GitHub Actions
+- Configure a custom domain with Amazon Route 53 and AWS Certificate Manager
 
 ---
 
 # Conclusion
 
-This project demonstrates the deployment of a secure, scalable, and cost-effective cloud infrastructure using core AWS services. By implementing identity management, content delivery, monitoring, automation, and cost optimization, the environment reflects many of the foundational concepts expected of an AWS Cloud Engineer.
+This project demonstrates the deployment of a secure, scalable, and cost-effective cloud infrastructure using core Amazon Web Services.
 
-The project reinforced practical cloud administration skills while following AWS security best practices and the AWS Well-Architected Framework. It also serves as a strong portfolio project demonstrating hands-on experience with cloud infrastructure deployment, monitoring, automation, and operational management.
-screenshots/06-route53.png
-```
+The environment provided practical experience with:
+
+- AWS Identity and Access Management
+- Static Website Hosting
+- Content Delivery Networks
+- Infrastructure Monitoring
+- Cloud Cost Management
+- AWS Security Best Practices
+
+Through this project, I gained hands-on experience deploying, securing, monitoring, and documenting cloud infrastructure while following the AWS Well-Architected Framework and cloud operational best practices.
+
+This lab also strengthened my understanding of foundational AWS Cloud Practitioner concepts and serves as a portfolio project demonstrating practical cloud engineering skills.
+
+---
+
+# Key Takeaways
+
+✔ Secured an AWS account using MFA and IAM
+
+✔ Implemented Least Privilege access control
+
+✔ Deployed a static website using Amazon S3
+
+✔ Accelerated content delivery using Amazon CloudFront
+
+✔ Explored AWS monitoring with Amazon CloudWatch
+
+✔ Implemented cloud cost monitoring with AWS Budgets
+
+✔ Reviewed spending using AWS Cost Explorer
+
+✔ Documented the deployment using GitHub
+
+✔ Practiced cloud resource cleanup to minimize costs
+
+---
+
+<div align="center">
+
+## AWS Services Demonstrated
+
+| Compute | Storage | Networking | Security | Monitoring | Cost |
+|---------|----------|------------|-----------|------------|------|
+| — | Amazon S3 | Amazon CloudFront | AWS IAM | Amazon CloudWatch | AWS Budgets |
+| — | — | HTTPS Delivery | MFA | Metrics | Cost Explorer |
+
+---
+
+### Built for the AWS Certified Cloud Practitioner (CLF-C02)
+
+**Designed and implemented by Christopher Tran**
+
+</div>
