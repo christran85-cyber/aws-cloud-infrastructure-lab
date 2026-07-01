@@ -285,34 +285,37 @@ screenshots/04-cloudfront.png
 
 ---
 
-# Phase 5: AWS Certificate Manager
+# Phase 5: Amazon CloudWatch Monitoring
 
-## Configure HTTPS
+## Monitor Cloud Infrastructure
 
-An SSL/TLS certificate was requested through AWS Certificate Manager and attached to the CloudFront distribution.
+Amazon CloudWatch was used to explore monitoring capabilities and gain operational visibility into the deployed AWS infrastructure.
 
-### Certificate Details
+### Monitoring Tasks
 
-| Setting    | Value                   |
-| ---------- | ----------------------- |
-| Service    | AWS Certificate Manager |
-| Validation | DNS                     |
-| Status     | Issued                  |
-| Protocol   | HTTPS                   |
+- Accessed Amazon CloudWatch
+- Explored CloudWatch Metrics
+- Reviewed AWS monitoring services
+- Examined monitoring dashboards
+- Learned CloudWatch monitoring workflow
 
-### Tasks Completed
+### Services Monitored
 
-* Requested SSL certificate
-* Verified domain ownership
-* Validated DNS records
-* Attached certificate to CloudFront
+| Service | Purpose |
+|----------|----------|
+| Amazon CloudWatch | Infrastructure monitoring |
+| Amazon S3 | Storage metrics |
+| Amazon CloudFront | Performance metrics |
 
 ### Outcome
 
-The website now uses encrypted HTTPS connections, improving security and user trust.
+Amazon CloudWatch provides centralized monitoring, metrics collection, dashboards, alarms, and operational visibility for AWS resources. This enables administrators to monitor cloud infrastructure health and performance from a single service.
 
-**Screenshot**
+### Screenshot
 
+![CloudWatch](screenshots/05-cloudwatch.png)
+
+---
 ```
 screenshots/05-acm-certificate.png
 ```
