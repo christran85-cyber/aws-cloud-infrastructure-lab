@@ -223,12 +223,12 @@ Amazon CloudFront was deployed in front of the Amazon S3 static website to impro
 
 | Setting | Value |
 |----------|----------|
-| Origin | Amazon S3 Static Website |
-| Distribution Type | Single Website |
+| Distribution Name | aws-cloud-infrastructure-lab |
+| Distribution Domain | d7v34nrpkr3c6.cloudfront.net |
 | HTTPS | Enabled |
-| Compression | Enabled |
-| Caching | AWS Recommended |
+| HTTP Versions | HTTP/2, HTTP/1.1, HTTP/1.0 |
 | Price Class | Use All Edge Locations |
+| Status | Deployed |
 
 ### Tasks Completed
 
@@ -236,7 +236,6 @@ Amazon CloudFront was deployed in front of the Amazon S3 static website to impro
 - Connected Distribution to Amazon S3
 - Enabled HTTPS Delivery
 - Configured Default Root Object
-- Enabled Compression
 - Tested Website Accessibility
 
 ### Benefits
@@ -246,17 +245,15 @@ Amazon CloudFront was deployed in front of the Amazon S3 static website to impro
 - HTTPS Encryption
 - Edge Caching
 - Improved Availability
-- DDoS Resilience through AWS Edge Network
-
+- AWS Global Edge Network
+  
 ### Outcome
 
-Website traffic is securely delivered through Amazon CloudFront using HTTPS while improving performance through AWS Global Edge Locations.
+Amazon CloudFront securely delivers website content over HTTPS while improving global performance through AWS edge locations and content caching.
 
-**Screenshot**
+### Screenshot
 
-```
-screenshots/04-cloudfront.png
-```
+![Phase 4 - Amazon CloudFront](images/phase4.png)
 
 ---
 
