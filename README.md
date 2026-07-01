@@ -316,9 +316,6 @@ Amazon CloudWatch provides centralized monitoring, metrics collection, dashboard
 ![CloudWatch](screenshots/05-cloudwatch.png)
 
 ---
-```
-screenshots/05-acm-certificate.png
-```
 
 ---
 
@@ -356,10 +353,6 @@ AWS Cost Management provides visibility into cloud spending and enables proactiv
 ![AWS Cost Explorer](screenshots/06-cost-explorer.png)
 
 ---
-
-```
-screenshots/06-route53.png
-```
 
 ---
 
