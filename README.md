@@ -125,7 +125,7 @@ Security best practices were implemented before deploying cloud resources.
 
 Administrative tasks are performed using IAM instead of the AWS Root account.
 
-![Architecture](images/phase 1.png).
+![Architecture](images/phase1.png).
 
 ```
 
