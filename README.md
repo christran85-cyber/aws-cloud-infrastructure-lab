@@ -149,10 +149,10 @@ AWS Identity and Access Management (IAM) was configured following least privileg
 ### IAM Groups
 
 | Group | Permissions |
-|----------|------------|
+|----------|----------|
 | Administrators | AdministratorAccess |
 | Developers | PowerUserAccess |
-| ReadOnly | ReadOnlyAccess |
+| ReadOnlyAccess | ReadOnlyAccess |
 
 ### Security Features
 
@@ -165,11 +165,10 @@ AWS Identity and Access Management (IAM) was configured following least privileg
 
 AWS resources are managed through IAM instead of the Root account.
 
-**Screenshot**
+##Screenshot
 
-```
-screenshots/02-iam-users.png
-```
+![Phase 1 -  Identity and Access Management](images/phase2.png)
+
 
 ---
 
@@ -208,8 +207,10 @@ The website was successfully deployed using Amazon S3 Static Website Hosting.
 
 **Screenshot**
 
-```
-screenshots/03-s3-bucket.png
+...
+
+![Phase 2 - AWS Account Security](images/phase1.png)
+
 ```
 
 ---
