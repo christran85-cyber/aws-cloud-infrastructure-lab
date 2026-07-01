@@ -271,13 +271,13 @@ Amazon CloudWatch was used to explore AWS monitoring services and review infrast
 - Examined CloudWatch Dashboards
 - Learned CloudWatch Monitoring Workflow
 
-### Services Reviewed
+### Monitoring Tasks
 
-| Service | Purpose |
-|----------|----------|
-| Amazon CloudWatch | Infrastructure Monitoring |
-| Amazon S3 | Storage Metrics |
-| Amazon CloudFront | Performance Monitoring |
+- Opened Amazon CloudWatch
+- Explored CloudWatch Metrics
+- Reviewed available AWS metric namespaces
+- Examined monitoring dashboards
+- Learned CloudWatch monitoring workflow
 
 ### Monitoring Features
 
@@ -285,18 +285,16 @@ Amazon CloudWatch was used to explore AWS monitoring services and review infrast
 - Dashboards
 - Alarms
 - Logs
-- Application Monitoring
 - Infrastructure Monitoring
+- Operational Visibility
 
 ### Outcome
 
-Amazon CloudWatch provides centralized monitoring, operational visibility, and infrastructure health monitoring for AWS cloud resources.
+Amazon CloudWatch provides centralized monitoring, metrics collection, dashboards, alarms, and operational visibility across AWS services, helping administrators monitor infrastructure health and performance.
 
-**Screenshot**
+### Screenshot
 
-```
-screenshots/05-cloudwatch.png
-```
+![Phase 5 - Amazon CloudWatch](images/phase5.png)
 
 ---
 
