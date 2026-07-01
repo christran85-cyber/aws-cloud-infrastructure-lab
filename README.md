@@ -316,28 +316,26 @@ AWS Cost Management services were configured to monitor cloud spending and preve
 
 | Service | Purpose |
 |----------|----------|
-| AWS Budgets | Spending Alerts |
+| AWS Budgets | Budget Monitoring & Alerts |
 | AWS Cost Explorer | Cost Analysis |
-| Billing Dashboard | Cost Monitoring |
-| AWS Free Tier | Usage Tracking |
+| Billing Dashboard | Billing Overview |
+| AWS Free Tier | Usage Monitoring |
 
 ### Cost Optimization
 
-The infrastructure was designed to minimize operational costs by utilizing Free Tier eligible AWS services whenever possible.
+### Cost Optimization
+
+The cloud environment was designed to minimize operational costs by using AWS Free Tier eligible services, monitoring spending with AWS Budgets, and reviewing usage through AWS Cost Explorer.
 
 ### Outcome
 
-AWS Cost Management provides visibility into cloud spending while helping maintain cost-efficient cloud operations.
+AWS Cost Management provides visibility into cloud spending through budgets, billing dashboards, and cost analysis, helping maintain cost-efficient cloud operations and prevent unexpected charges.
 
-**Screenshot**
+### Screenshot
 
-```
-screenshots/06-budget.png
-```
+![Phase 6 - AWS Budgets](images/phase6budgets.png)
 
-```
-screenshots/06-cost-explorer.png
-```
+![Phase 6 - AWS Cost Explorer](images/phase6cost.png)
 
 ---
 
