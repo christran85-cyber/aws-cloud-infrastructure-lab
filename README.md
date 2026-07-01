@@ -116,7 +116,7 @@ Security best practices were implemented before deploying cloud resources.
 
 | Setting | Value |
 |----------|----------|
-| Username | cloudadmin |
+| Username | Yoshiharaadmin |
 | Access | Console |
 | MFA | Enabled |
 | Permissions | AdministratorAccess |
@@ -125,10 +125,10 @@ Security best practices were implemented before deploying cloud resources.
 
 Administrative tasks are performed using IAM instead of the AWS Root account.
 
-**Screenshot**
+!(images/Finalflow.png).
 
 ```
-screenshots/01-aws-console.png
+
 ```
 
 ---
