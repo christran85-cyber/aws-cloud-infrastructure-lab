@@ -165,7 +165,7 @@ AWS Identity and Access Management (IAM) was configured following least privileg
 
 AWS resources are managed through IAM instead of the Root account.
 
-## Screenshot
+### Screenshot
 
 ![Phase 1 -  Identity and Access Management](images/phase2.png)
 
@@ -205,13 +205,11 @@ Amazon S3 was configured to host a static website.
 
 The website was successfully deployed using Amazon S3 Static Website Hosting.
 
-**Screenshot**
+## Screenshot
 
 ...
 
 ![Phase 3 - Amazon S3 Static Website Hosting](images/phase3.png)
-
-```
 
 ---
 
