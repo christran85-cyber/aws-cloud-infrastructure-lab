@@ -209,7 +209,7 @@ The website was successfully deployed using Amazon S3 Static Website Hosting.
 
 ...
 
-![Phase 2 - AWS Account Security](images/phase1.png)
+![Phase 3 - Amazon S3 Static Website Hosting](images/phase3.png)
 
 ```
 
