@@ -131,7 +131,6 @@ Administrative tasks are performed using IAM instead of the AWS Root account.
 
 ---
 
----
 
 # Phase 2: Identity and Access Management
 
