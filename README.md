@@ -323,8 +323,6 @@ AWS Cost Management services were configured to monitor cloud spending and preve
 
 ### Cost Optimization
 
-### Cost Optimization
-
 The cloud environment was designed to minimize operational costs by using AWS Free Tier eligible services, monitoring spending with AWS Budgets, and reviewing usage through AWS Cost Explorer.
 
 ### Outcome
